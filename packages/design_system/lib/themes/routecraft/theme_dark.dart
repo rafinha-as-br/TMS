@@ -28,7 +28,7 @@ final ThemeData routeCraftDarkTheme = ThemeData(
     tertiaryContainer: RouteCraftColors.darkNeutralBackgroundColor,
     onTertiaryContainer: Colors.white,
 
-    surface: RouteCraftColors.darkNeutralSurfaceColor,
+    surface: RouteCraftColors.darkNeutralBackgroundColor,
     onSurface: RouteCraftColors.darkTextTitleColor,
 
     surfaceContainerHighest: RouteCraftColors.darkNeutralElementsColor,
@@ -76,6 +76,13 @@ final ThemeData routeCraftDarkTheme = ThemeData(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
     ),
   ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      foregroundColor: Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+    ),
+  ),
 
   // inputs
   inputDecorationTheme: InputDecorationTheme(
@@ -95,9 +102,9 @@ final ThemeData routeCraftDarkTheme = ThemeData(
   // cads
   cardTheme: CardThemeData(
     color: RouteCraftColors.darkNeutralSurfaceColor,
-    elevation: 1,
+    elevation: 6,
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(17),
     ),
   )
 

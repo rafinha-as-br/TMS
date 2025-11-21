@@ -1,11 +1,12 @@
-import 'package:design_system/widgets/buttons/button_sizes.dart';
-import 'package:design_system/widgets/buttons/button_types.dart';
 import 'package:flutter/material.dart';
 
-/// these are the actions button, used for main actions, is a flexible button 
+import 'button_sizes.dart';
+import 'button_types.dart';
+
+/// these are the cancels button, used for canceling actions, is a flexible button
 /// that can receive just a icon or a text
-class ActionButton extends StatelessWidget {
-  const ActionButton({
+class CancelButton extends StatelessWidget {
+  const CancelButton({
     super.key, this.text, this.icon,
     required this.size, required this.type,
     required this.onPressed
@@ -16,7 +17,6 @@ class ActionButton extends StatelessWidget {
   final ButtonSize size;
   final ButtonType type;
   final VoidCallback onPressed;
-
 
   @override
   Widget build(BuildContext context) {
@@ -45,19 +45,21 @@ class ActionButton extends StatelessWidget {
 
     final button = switch(type){
       ButtonType.filled => ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          padding: paddingFor(size),
-          minimumSize: Size(double.infinity, heightFor(size))
-        ),
-        child: content
+          onPressed: onPressed,
+          style: ElevatedButton.styleFrom(
+              padding: paddingFor(size),
+              minimumSize: Size(double.infinity, heightFor(size),),
+            backgroundColor: Theme.of(context).colorScheme.error
+          ),
+          child: content
       ),
 
       ButtonType.outlined => OutlinedButton(
           onPressed: onPressed,
           style: OutlinedButton.styleFrom(
               padding: paddingFor(size),
-              minimumSize: Size(double.infinity, heightFor(size))
+              minimumSize: Size(double.infinity, heightFor(size)),
+            foregroundColor: Theme.of(context).colorScheme.error
           ),
           child: content
       ),
@@ -70,4 +72,3 @@ class ActionButton extends StatelessWidget {
     return button;
   }
 }
-
