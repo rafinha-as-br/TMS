@@ -29,11 +29,11 @@ EdgeInsets paddingFor(ButtonSize size){
 TextStyle textStyleFor(ButtonSize size, BuildContext context){
   switch (size){
     case ButtonSize.large:
-      return Theme.of(context).textTheme.titleSmall!;
+      return Theme.of(context).textTheme.titleLarge!;
     case ButtonSize.medium:
-      return Theme.of(context).textTheme.bodySmall!;
+      return Theme.of(context).textTheme.bodyLarge!;
     case ButtonSize.small:
-      return Theme.of(context).textTheme.labelMedium!;
+      return Theme.of(context).textTheme.labelLarge!;
   }
 
 }
