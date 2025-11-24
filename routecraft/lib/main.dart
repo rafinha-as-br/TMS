@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: routeCraftLightTheme,
       darkTheme: routeCraftDarkTheme,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       home: Scaffold(
         body: Padding(
           padding: const EdgeInsets.all(17.0),

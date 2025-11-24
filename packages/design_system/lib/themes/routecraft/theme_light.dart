@@ -1,4 +1,4 @@
-import 'package:design_system/themes/theme_colors.dart';
+import 'package:design_system/tokens/token_theme_colors.dart';
 import 'package:flutter/material.dart';
 
 /// this is the RouteCraft light theme file,
@@ -48,24 +48,24 @@ final ThemeData routeCraftLightTheme = ThemeData(
     onInverseSurface: Colors.white,
     inversePrimary: RouteCraftColors.lightPrimaryBackgroundColor,
   ),
-
+ 
   // typography
   textTheme: const TextTheme(
-    headlineLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-    headlineMedium: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-    headlineSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    headlineLarge: TextStyle(color: Colors.white,fontSize: 30, fontWeight: FontWeight.bold),
+    headlineMedium: TextStyle(color: Colors.white,fontSize: 26, fontWeight: FontWeight.bold),
+    headlineSmall: TextStyle(color: Colors.white,fontSize: 22, fontWeight: FontWeight.bold),
 
-    titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-    titleMedium: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-    titleSmall: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+    titleLarge: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),
+    titleMedium: TextStyle(color: Colors.white,fontSize: 16, fontWeight: FontWeight.w600),
+    titleSmall: TextStyle(color: Colors.white,fontSize: 14, fontWeight: FontWeight.w500),
 
-    bodyLarge: TextStyle(fontSize: 16),
-    bodyMedium: TextStyle(fontSize: 14),
-    bodySmall: TextStyle(fontSize: 12),
+    bodyLarge: TextStyle(color: Colors.white,fontSize: 14),
+    bodyMedium: TextStyle(color: Colors.white,fontSize: 12),
+    bodySmall: TextStyle(color: Colors.white,fontSize: 10),
 
-    labelLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
-    labelMedium: TextStyle(fontSize: 12),
-    labelSmall: TextStyle(fontSize: 10),
+    labelLarge: TextStyle(color: Colors.white,fontSize: 12, fontWeight: FontWeight.w600),
+    labelMedium: TextStyle(color: Colors.white,fontSize: 10),
+    labelSmall: TextStyle(color: Colors.white,fontSize: 8),
   ),
 
   // buttons
@@ -73,18 +73,33 @@ final ThemeData routeCraftLightTheme = ThemeData(
     style: ElevatedButton.styleFrom(
       backgroundColor: RouteCraftColors.lightPrimaryElementsColor,
       foregroundColor: Colors.white,
+      elevation: 7,
+      shadowColor: RouteCraftColors.lightPrimarySubElementsColor,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+    ),
+  ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: OutlinedButton.styleFrom(
+      foregroundColor: RouteCraftColors.lightPrimaryElementsColor,
+      shadowColor: RouteCraftColors.lightPrimarySubElementsColor,
+      side: BorderSide(
+        color: RouteCraftColors.lightPrimaryElementsColor,
+        width: 1,
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
     ),
   ),
 
   // inputs
   inputDecorationTheme: InputDecorationTheme(
-    filled: true,
+    filled: false,
     fillColor: RouteCraftColors.lightNeutralSurfaceColor,
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
-      borderSide: BorderSide(color: RouteCraftColors.lightNeutralElementsColor),
+      borderSide: BorderSide(color: RouteCraftColors.lightSecondaryElementsColor),
     ),
     focusedBorder: OutlineInputBorder(
       borderSide: BorderSide(color: RouteCraftColors.lightPrimaryElementsColor),
@@ -95,7 +110,7 @@ final ThemeData routeCraftLightTheme = ThemeData(
 
   // cards
   cardTheme: CardThemeData(
-    color: RouteCraftColors.lightNeutralSurfaceColor,
+    color: RouteCraftColors.lightNeutralBackgroundColor,
     elevation: 2,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(16),

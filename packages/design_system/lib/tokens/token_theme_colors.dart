@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-/// this is the main project colors file, it contains every application colors
+/// this is the main project colors TOKENS, it contains every application colors
 
 /// routeCraft colors
 class RouteCraftColors {

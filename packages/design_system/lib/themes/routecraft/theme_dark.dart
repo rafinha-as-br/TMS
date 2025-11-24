@@ -1,4 +1,4 @@
-import 'package:design_system/themes/theme_colors.dart';
+import 'package:design_system/tokens/token_theme_colors.dart';
 import 'package:flutter/material.dart';
 
 /// this is the RouteCraft dark theme file,
@@ -10,7 +10,7 @@ final ThemeData routeCraftDarkTheme = ThemeData(
   // dark color scheme
   colorScheme: ColorScheme(
     brightness: Brightness.dark,
-    primary: RouteCraftColors.darkPrimaryElementsColor,
+    primary: RouteCraftColors.darkPrimaryBackgroundColor,
     onPrimary: Colors.white,
 
     primaryContainer: RouteCraftColors.darkPrimaryBackgroundColor,
@@ -49,23 +49,23 @@ final ThemeData routeCraftDarkTheme = ThemeData(
   ),
 
   // typography
-  textTheme: const TextTheme(
-    headlineLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-    headlineMedium: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-    headlineSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    textTheme: const TextTheme(
+      headlineLarge: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+      headlineMedium: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+      headlineSmall: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
 
-    titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-    titleMedium: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-    titleSmall: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+      titleLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+      titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+      titleSmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
 
-    bodyLarge: TextStyle(fontSize: 16),
-    bodyMedium: TextStyle(fontSize: 14),
-    bodySmall: TextStyle(fontSize: 12),
+      bodyLarge: TextStyle(fontSize: 14),
+      bodyMedium: TextStyle(fontSize: 12),
+      bodySmall: TextStyle(fontSize: 10),
 
-    labelLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
-    labelMedium: TextStyle(fontSize: 12),
-    labelSmall: TextStyle(fontSize: 10),
-  ),
+      labelLarge: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
+      labelMedium: TextStyle(fontSize: 10),
+      labelSmall: TextStyle(fontSize: 8),
+    ),
 
   //buttons
   elevatedButtonTheme: ElevatedButtonThemeData(
@@ -77,10 +77,15 @@ final ThemeData routeCraftDarkTheme = ThemeData(
     ),
   ),
   outlinedButtonTheme: OutlinedButtonThemeData(
-    style: ElevatedButton.styleFrom(
-      foregroundColor: Colors.white,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+    style: OutlinedButton.styleFrom(
+      foregroundColor: RouteCraftColors.lightPrimaryElementsColor,
+      side: BorderSide(
+        color: RouteCraftColors.lightPrimaryElementsColor,
+        width: 1,
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
     ),
   ),
 
@@ -93,7 +98,7 @@ final ThemeData routeCraftDarkTheme = ThemeData(
       borderSide: BorderSide(color: RouteCraftColors.darkNeutralElementsColor),
     ),
     focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: RouteCraftColors.darkPrimaryElementsColor),
+      borderSide: BorderSide(color: RouteCraftColors.darkPrimaryBackgroundColor),
       borderRadius: BorderRadius.circular(12),
     ),
     labelStyle: TextStyle(color: RouteCraftColors.darkTextSubtitleColor),
